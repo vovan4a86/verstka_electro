@@ -1,0 +1,1 @@
+сюда кидаем js файлы для сжатия -> gulp jstomin -> и в output будут min js

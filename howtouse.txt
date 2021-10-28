@@ -1,0 +1,65 @@
+С правами администратора!
+
+1) npm i
+1a) npm install jshint
+1b) npm install --global gulp-cli
+2) npm install webp-converter@2.2.3 --save-dev
+   npm install sass gulp-sass --save-dev
+3) git init
+4) gulp
+
+- удаление зависимостей из проекта
+Если vuex у вас лежит внутри dependencies а именно он должен там сидеть, то.
+npm uninstall --save vuex
+Если в devDependencies, то.
+npm uninstall -D vuex
+------------------------
+npm uninstall -D gulp-file-include gulp-concat gulp-sourcemaps gulp-cache jquery jquery-ui
+
+- !!! - WEBP-CSS выдает ошибку если в названии файла картинки есть пробелы и/или кириллица
+
+Папка проекта не должна называться gulp
+
+Запускать можно и отдельные функции, например gulp css
+
+ У кого копирует в dist только .jpg попробуйте немного изменить запись форматов с /*.{jpg, png, svg, gif, ico, webp} на /*.+(png|jpg|gif|ico|svg|webp)
+
+Для WEBP-CSS следует использовать настройки: webpcss({webpClass: '.webp',noWebpClass: '.no-webp'}
+
+Переустановка node-sass
+npm rebuild node-sass ?
+
+В package.json:
+"sass": "latest"
+в gulpfile.js меняем на:
+scss = require('gulp-sass')(require('sass'));
+
+Проблема с pyton
+npm install --global windows-build-tools -
+
+
+///////////////////
+core-js (https://www.npmjs.com/package/core-js) - Модульная стандартная библиотека для JavaScript. Включает полифилы для ECMAScript до 2021 года: promises, symbols, collections, iterators, typed arrays, many other features, ECMAScript proposals, some cross-platform WHATWG / W3C features and proposals like URL. Вы можете загружать только необходимые функции или использовать их без загрязнения глобального пространства имен. npm i core-js
+
+npm i swiper
+npm i jquery
+npm i jquery-ui
+
+!!!! ОШИБКА Uncaught ReferenceError: regeneratorRuntime is not defined
+значит babel не понимает async/await функции.
+ставим:
+npm install --save @babel/polyfill (именно --save)
+
+в файл script.js 
+import "@babel/polyfill";
+
+https://babeljs.io/docs/en/babel-polyfill, 
+
+
+
+---= jshint =---
+Хотя встроенная конфигурация хорошо работает для отдельного файла, вы также можете включить этот параметр для всего проекта, создав ".jshintrc" файл в корне вашего проекта и добавив его туда.
+
+{
+  "esversion": 6
+}

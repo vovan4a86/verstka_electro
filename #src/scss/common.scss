@@ -1,0 +1,32 @@
+//<ОБЩИЕ СТИЛИ>==================================
+
+// убираем плавно placeholder
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+
+// кнопки
+.btn {
+  display: inline-block;
+  padding: 17.5px 70px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+  border-radius: 46px;
+  background-color: #F5D061;
+  transition: all 0.3s ease-out;
+  @include adaptiv-font(20, 14, 1);
+  &:hover {
+    background-color: #f1b603;
+  }
+  @media (max-width: $sm) {
+    padding: 12.5px 55px;
+  }
+}
+

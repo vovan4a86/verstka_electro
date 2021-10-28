@@ -1,0 +1,28 @@
+block config
+  include includes/_config
+//- назначаем переменные для данной страницы (append/prepend - добавить в конец/начало блока)
+append config
+  - title = 'title'
+  - desc = 'description'
+  - currentURL = 'index.html'
+
+doctype html
+html(lang=lang)
+  include includes/_head
+
+  body
+    .wrapper
+
+      include includes/_header
+
+      //- include includes/_blocks/block-01
+
+      //- include examples/tabs
+      //- include examples/form-email-submit
+      //- include examples/valid
+
+
+      //- include includes/_popup
+      //- include includes/_footer
+
+  script(src="./js/script.js")

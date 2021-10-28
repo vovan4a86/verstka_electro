@@ -1,0 +1,62 @@
+// === ГАМБУРГЕР В 2 ЛИНИИ ===
+.icon-menu {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  border: none;
+  z-index: 10;
+}
+
+.icon-menu span {
+  transition: all 0.3s ease 0s;
+  top: 17px;
+  left: 10px;
+  position: absolute;
+  width: 23px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  @media (max-width: $sm) {
+    top: 17px;
+    background-color: #115E5C;
+    width: 11px;
+    left: 6px;
+  }
+}
+.icon-menu span:last-child {
+  width: 17px;
+  top: 24px;
+  @media (max-width: $sm) {
+    top: 10px;
+  }
+}
+
+.icon-menu:focus {
+  outline: none;
+}
+
+.icon-menu.active span {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.icon-menu.active span {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 21px;
+  @media (max-width: $sm) {
+    top: 14px;
+    width: 17px;
+  }
+}
+.icon-menu.active span:last-child {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 23px;
+  bottom: 21px;
+  @media (max-width: $sm) {
+    bottom: 13px;
+    width: 17px;
+  }
+}
+// === END ГАМБУРГЕР ===

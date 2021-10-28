@@ -1,0 +1,104 @@
+// ********** SWIPER ****************
+/*  .swiper-container
+      .swiper-wrapper
+        .swiper-slide
+        .swiper-slide
+        .swiper-slide
+      .swiper-pagination
+      .swiper-button-prev 
+      .swiper-button-next 
+      .swiper-scrollbar
+*/
+/* JS
+  allowTouchMove: true, Если false, то единственный способ переключить слайд - использовать внешние функции API, такие как slidePrev или slideNext.
+
+  centerInsufficientSlides: false, Когда он включен, он центрирует слайды, если количество слайдов меньше, чем у slidesPerView. Не предназначен для использования в режиме цикла и slidesPerColumn
+
+  centeredSlides: false, Если true, активный слайд будет центрирован, а не всегда слева.
+
+  direction: horizontal | vertical
+
+  effect: 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip'
+
+  enabled: true, Включен ли изначально Swiper. Когда Swiper отключен, он скроет все элементы навигации и не будет реагировать на какие-либо события и взаимодействия.
+
+  freeMode: false, Если включено, слайды не будут иметь фиксированных позиций.
+
+  initialSlide: 0, Индексный номер начального слайда.
+
+  loop: false, Установите значение true, чтобы включить режим непрерывного цикла.
+
+  on Register event handlers
+
+  slidesPerView: 1 | 'auto', Если вы используете его со значением «auto» и вместе с loop: true, тогда вам нужно указать параметр loopedSlides с количеством слайдов для цикла (дублировать)
+
+  spaceBetween: number (in px)
+
+  speed: 300
+
+  if (slider) {
+    slider.destroy()
+  }
+*/
+
+const slider = new Swiper('.slider', {
+  // Default parameters
+  slidesPerView: 1,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: false,
+    dynamicBullets: false,
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
+})
+// ********** END SWIPER ****************
+
+если слайдер ведет себя не как надо по размерам враппера поиграй с
+display: flex;  вкл-выкл
+justify-content: space-between; -center
+
+если нужно fraction не 1 / 4, а 01 / 04
+ pagination: {
+    el: '.swiper-pagination',
+    type: 'custom',
+    renderCustom: function (slider, current, total) {
+      return ('0' + current).slice(-2) + ' / ' + ('0' + total).slice(-2);
+    }
+  },
+
+а это с проверкой на больше 10 (не проверял)
+renderCustom: function (swiper, current, total) {
+  function numberAppend(d) {
+  return (d < 10) ? '0' + d.toString() : d.toString();
+  }
+return numberAppend(current) + ' of ' + numberAppend(total);}
+},
+

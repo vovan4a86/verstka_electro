@@ -1,0 +1,82 @@
+//- подключаем ui.scss + functions.js
+
+.tabs-block._tabs
+  nav.tabs-block__nav
+    .tabs-block__item._tabs-item._active Таб 1
+    .tabs-block__item._tabs-item Таб 2
+    .tabs-block__item._tabs-item Таб 3
+  .tabs-block__body
+    .tabs-block__block._tabs-block._active Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eaque beatae debitis quaerat quas reiciendis esse dicta, doloribus adipisci corporis maiores saepe quos ducimus. Possimus hic ratione repellendus et explicabo!
+    .tabs-block__block._tabs-block Odio, praesentium quia aspernatur nesciunt expedita maiores dolore, quisquam, delectus quidem ex aperiam laborum?Natus dignissimos commodi tempora eaque voluptates! Esse, Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad perspiciatis necessitatibus assumenda, hic exercitationem enim et dolores, debitis delectus dicta at facilis deleniti officiis quod dignissimos blanditiis officia tenetur excepturi?
+    .tabs-block__block._tabs-block Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, porro. Dignissimos, reiciendis delectus. Consequuntur culpa ut similique sequi, totam repudiandae excepturi repellendus maiores aliquam harum omnis possimus incidunt numquam modi.Aperiam minima assumenda eius, quae atque voluptatibus nisi mollitia dolores itaque, excepturi fugit nobis quaerat dignissimos? Odio, praesentium quia aspernatur nesciunt expedita maiores dolore, quisquam, delectus quidem ex aperiam laborum?Natus dignissimos commodi tempora eaque voluptates! Esse, ut nostrum eligendi dolore, suscipit consequuntur, deserunt fugiat cupiditate nobis omnis porro cum repellat sit enim? Illum nam eveniet molestias excepturi at dolore!
+    
+.spollers-block._scr-item._spollers._one
+  .spollers-block__item
+    .spollers-block__title._spoller Я вопрос
+    .spollers-block__body Я ответ Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut asperiores nesciunt nobis vel nihil, quibusdam error sunt accusamus dolore quisquam architecto maiores. Qui consectetur corporis sit quae inventore culpa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut asperiores nesciunt nobis vel nihil, quibusdam error sunt accusamus dolore quisquam architecto maiores. Qui consectetur corporis sit quae inventore culpa!
+      
+  .spollers-block__item
+    .spollers-block__title._spoller Я вопрос
+    .spollers-block__body Я ответ Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut asperiores nesciunt nobis vel nihil, quibusdam error sunt accusamus dolore quisquam architecto maiores. Qui consectetur corporis sit quae inventore culpa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut asperiores nesciunt nobis vel nihil, quibusdam error sunt accusamus dolore quisquam architecto maiores. Qui consectetur corporis sit quae inventore culpa!
+      
+  .spollers-block__item
+    .spollers-block__title._spoller Я вопрос
+    .spollers-block__body Я ответ Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut asperiores nesciunt nobis vel nihil, quibusdam error sunt accusamus dolore quisquam architecto maiores. Qui consectetur corporis sit quae inventore culpa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut asperiores nesciunt nobis vel nihil, quibusdam error sunt accusamus dolore quisquam architecto maiores. Qui consectetur corporis sit quae inventore culpa!
+      
+
+form.form(action="#")
+  .form__item
+    label.form__label(for="inp1") Name
+    input.input._req._name(type="text", name="form2", placeholder="Name")
+    span.form__error 
+
+  .form__item
+    label.form__label(for="inp2") Email
+    input#inp.input._req._email(autocomplete="off", type="text", name="form1", placeholder="E-mail")
+    span.form__error 
+  
+  .form__item
+    label.form__label(for="inp3") Phone
+    input.input._req._phone(type="phone", name="form3")
+    span.form__error 
+
+  .form__item
+    label.form__label(for="inp4") Birthday
+    input.input._req._date(type="text", name="form4")
+    span.form__error 
+
+  .form__item
+    select.form__select(name="form")
+      option(value="1", selected) Пункт №1
+      option(value="2") Пункт №2
+      option(value="3") Пункт №3
+      option(value="4") Пункт №4
+
+
+  .form__line
+    .quantity
+      .quantity__button.quantity__button_plus
+      .quantity__input
+        input(autocomplete="off", type="text", name="form[]", value="1")
+      .quantity__button.quantity__button_minus
+
+  .form__line
+    .price
+      .price__range
+      .price__inputs
+        input#price-start.input(autocomplete="off", type="text", name="formr")
+        input#price-end.input(autocomplete="off", type="text", name="formr")
+
+  button.form__btn.btn(type="submit") Задать вопрос
+
+  .popup._anim-item Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem architecto quis assumenda mollitia ipsam illo, cumque <a href="#" data-hystmodal="#myModal">НАЖМИ МОДАЛЬНОЕ ОКНО</a> dolorum quam beatae tenetur, voluptatum unde natus, neque magnam. Officiis, et consequuntur! Odit.
+
+  .section
+    .sec._anim-item
+      p._anim-show Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugit tenetur, hic mollitia facilis minus rerum itaque. Aliquid error inventore incidunt eum, repellat autem ex recusandae soluta? Dolor, iste aliquam?
+    .sec._anim-item
+      p._anim-show Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugit tenetur, hic mollitia facilis minus rerum itaque. Aliquid error inventore incidunt eum, repellat autem ex recusandae soluta? Dolor, iste aliquam?
+    .sec._anim-item
+      p._anim-show Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugit tenetur, hic mollitia facilis minus rerum itaque. Aliquid error inventore incidunt eum, repellat autem ex recusandae soluta? Dolor, iste aliquam?
+    .sec._anim-item
+      p._anim-show Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugit tenetur, hic mollitia facilis minus rerum itaque. Aliquid error inventore incidunt eum, repellat autem ex recusandae soluta? Dolor, iste aliquam?

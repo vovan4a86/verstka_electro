@@ -1,0 +1,51 @@
+.form
+  form#form.form__body(action="#")
+    h1.form__title Отправда данных на почту
+    .form__item
+      label.form__label(for="formName") Имя*:
+      input#formName.form__input._req(type="text", name="name")
+    .form__item
+      label.form__label(for="formEmail") E-mail*:
+      input#formEmail.form__input._req._email(type="text", name="email")
+    .form__item
+      .form__label Левша или правша?
+      .options
+        .options__item
+          input#formRightHanded.options__input(checked, type="radio", value="right", name="hand")
+          label.options__label(for="formRightHanded")
+            span Правша
+        .options__item
+          input#formLeftHanded.options__input(type="radio", value="left", name="hand")
+          label.options__label(for="formLeftHanded")
+            span Левша
+    .form__item
+      label.form__label(for="formMessage") Сообщение:
+      textarea#formMessage.form__input(name="message")
+    .form__item
+      .form__label Возраст:
+      select.form__select(name="age")
+        option(value="от 18 до 25", selected) Молодой
+        option(value="от 25 до 45") Старый
+        option(value="от 45") Супер стар
+    //- .form__item
+    //-   .form__label Род занятий:
+    //-   select.form__select(name="rod")
+    //-     option(value="verst", selected) Верстальщик
+    //-     option(value="design") Дизайнер
+    //-     option(value="prog") Программист
+    .form__item
+      .form__label Прикрепить фото
+      .file
+        .file__item
+          input#formImage.file__input(accept=".jpg, .png, .gif", type="file", name="image")
+          .file__button Выбрать
+        #formPreview.file__preview
+    .form__item
+      .checkbox
+        input#formAgreement.checkbox__input._req(checked, type="checkbox", name="agreement")
+        label.checkbox__label(for="formAgreement")
+          span
+            | Я даю свое согласие на обработку персональных данных в соответствии с 
+            a(href) Условиями
+            | *
+    button.form__button(type="submit") Отправить
